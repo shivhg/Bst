@@ -6,7 +6,7 @@
  */
 package com.pojo;
 
-public class Node {
+public final class Node {
 	private final Node left;
 	private final Node right;
 	private final int data;

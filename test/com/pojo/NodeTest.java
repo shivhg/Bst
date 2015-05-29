@@ -14,25 +14,25 @@ public class NodeTest {
 		assertNull(node.getLeft());
 		assertNull(node.getRight());
 	}
-	
+
 	@Test
 	public void TestConst1arg() {
 		node = new Node(3);
 		assertNotNull(node);
 		assertNull(node.getLeft());
 		assertNull(node.getRight());
-		assertEquals(3,node.getData());
+		assertEquals(3, node.getData());
 	}
-	
+
 	@Test
 	public void TestConst3arg() {
 		Node nodel = new Node(8);
 		Node noder = new Node(8);
-		node = new Node(3,nodel,noder);
+		node = new Node(3, nodel, noder);
 		assertNotNull(node);
 		assertNotNull(node.getLeft());
 		assertNotNull(node.getRight());
-		assertEquals(3,node.getData());
+		assertEquals(3, node.getData());
 	}
 
 }

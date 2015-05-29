@@ -1,14 +1,17 @@
 package com.service;
 
 import static org.junit.Assert.*;
+
 import org.junit.Before;
 import org.junit.Test;
 
+import com.helper.BstInsert;
 import com.pojo.Node;
 
 public class BstInsertTest {
 	Node node = null;
 	BstInsert bIns = null;
+
 	@Before
 	public void setup() {
 		bIns = new BstInsert();
@@ -21,17 +24,17 @@ public class BstInsertTest {
 		assertNull(node.getLeft());
 		assertNull(node.getRight());
 	}
-	
+
 	@Test
 	public void testInsertDataLess() {
 		node = bIns.insert(null, 4);
 		node = bIns.insert(node, 2);
 		assertEquals(4, node.getData());
 		assertNotNull(node.getLeft());
-		assertEquals(2,node.getLeft().getData());
+		assertEquals(2, node.getLeft().getData());
 		assertNull(node.getRight());
 	}
-	
+
 	@Test
 	public void testInsertDataGreat() {
 		node = bIns.insert(null, 5);
